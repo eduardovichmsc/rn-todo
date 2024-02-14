@@ -1,7 +1,11 @@
+import React from "react";
 import { FlatList, RefreshControl, Text, View } from "react-native";
 import { TodoItem } from "./TodoItem";
-import { useState } from "react";
-import { coffee, teal } from "../colors";
+import styled from "styled-components/native";
+
+const ListView = styled(FlatList)`
+  flex: 1;
+`;
 
 export const TodoList = ({
   todoList,
@@ -9,14 +13,14 @@ export const TodoList = ({
   removeTodoItem,
   toggleCompleted,
 }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       {todoList.length === 0 ? (
         <Text style={{ textAlign: "center" }}>no no no no no</Text>
       ) : (
-        <FlatList
+        <ListView
           data={todoList}
           refreshControl={
             <RefreshControl refreshing={isLoading} onRefresh={fetchTodoList} />

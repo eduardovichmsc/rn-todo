@@ -44,7 +44,7 @@ const getDate = (createdAt) => {
     date.getMonth() + 1
   }/${date.getFullYear()} - ${date.getHours(
     date.setHours(date.getHours() + UTC) // тут даже я ахерел
-  )}:${date.getMinutes(UTC)}`;
+  )}:${date.getMinutes()}`;
 };
 
 export const TodoItem = ({

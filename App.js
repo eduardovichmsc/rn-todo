@@ -68,7 +68,7 @@ export default function App() {
 
   const addTodoItem = async (text) => {
     if (text.length === 0) {
-      Alert.alert("Ошибка", "Введите текст.");
+      Alert.alert("Ошибка", "Введите текст");
       return;
     }
 
