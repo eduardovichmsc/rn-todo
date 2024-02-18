@@ -9,7 +9,7 @@ const TodoView = styled.View`
   flex-direction: row;
   gap: 10px;
   align-items: flex-end;
-  background: #ffffff10;
+  background: #ffffff18;
   padding: 20px 30px;
 `;
 const TodoDetails = styled.View`
@@ -37,14 +37,19 @@ const Divider = styled.View`
   background: #00000020;
 `;
 
-const UTC = 5;
+const normalizeMinutes = (minutes) => {
+  if (minutes.length < 10) {
+    return "0" + minutes;
+  }
+  return minutes;
+};
 const getDate = (createdAt) => {
   const date = new Date(createdAt);
   return `${date.getDate()}/${
     date.getMonth() + 1
   }/${date.getFullYear()} - ${date.getHours(
-    date.setHours(date.getHours() + UTC) // тут даже я ахерел
-  )}:${date.getMinutes()}`;
+    date.setHours(date.getHours()) // тут даже я ахерел
+  )}:${normalizeMinutes(date.getMinutes())}`;
 };
 
 export const TodoItem = ({

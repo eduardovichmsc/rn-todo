@@ -56,9 +56,11 @@ export default function App() {
     }
   }, []);
 
+  const URL = "http://192.168.30.119:3000/todo";
+
   const fetchTodoList = () => {
     axios
-      .get("https://65ca83853b05d29307e06471.mockapi.io/list")
+      .get(URL)
       .then(({ data }) => {
         setTodoList(data);
         setIsLoading(false);
@@ -73,11 +75,13 @@ export default function App() {
     }
 
     try {
-      await axios.post("https://65ca83853b05d29307e06471.mockapi.io/list", {
+      await axios.post(URL, {
+        id: Date.now(),
         title: text,
         createdAt: Date.now(),
+        completed: false,
       });
-      setTodoText("");
+      // setTodoText("");
       fetchTodoList();
     } catch (error) {
       console.log(error);
@@ -86,9 +90,7 @@ export default function App() {
 
   const removeTodoItem = async (id) => {
     try {
-      await axios.delete(
-        `https://65ca83853b05d29307e06471.mockapi.io/list/${id}`
-      );
+      await axios.delete(`${URL}/${id}`);
       const updatedTodoList = todoList.filter((todo) => todo.id !== id);
       setTodoList(updatedTodoList);
     } catch (error) {
@@ -102,10 +104,9 @@ export default function App() {
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
       );
       setTodoList(updatedTodoList);
-      await axios.put(
-        `https://65ca83853b05d29307e06471.mockapi.io/list/${id}`,
-        { completed: !todoList.find((todo) => todo.id === id).completed }
-      );
+      await axios.put(`${URL}/${id}`, {
+        completed: !todoList.find((todo) => todo.id === id).completed,
+      });
     } catch (error) {
       console.log(error);
     }

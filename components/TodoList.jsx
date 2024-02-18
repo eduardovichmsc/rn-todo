@@ -18,7 +18,7 @@ export const TodoList = ({
   return (
     <View style={{ flex: 1 }}>
       {todoList.length === 0 ? (
-        <Text style={{ textAlign: "center" }}>no no no no no</Text>
+        <Text style={{ textAlign: "center" }}>Добавьте новую задачу</Text>
       ) : (
         <ListView
           data={todoList}
