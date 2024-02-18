@@ -17,5 +17,6 @@ This application was made using React Native and Expo CLI.
 > works at 3000, but you can change it on index.js or by env parameters
 ---
 #### changes
-- initial commit - created and deployed todo app
-- added crud backend - Made simple CRUD backend on 3000 port using Node.js (Express.js) with localhost IP adress.
+- created and deployed todo app
+- Made simple CRUD backend on 3000 port using Node.js (Express.js) with localhost IP adress.
+- minor changes
