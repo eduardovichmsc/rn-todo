@@ -56,8 +56,6 @@ export default function App() {
     }
   }, []);
 
-  const URL = "http://192.168.30.119:3000/todo";
-
   const fetchTodoList = () => {
     axios
       .get(URL)
