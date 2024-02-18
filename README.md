@@ -12,4 +12,4 @@ How to run this applcation
 ---
 ### changes
 - initial commit - created and deployed todo app
-- 
+- added crud backend - Made simple CRUD backend on 3000 port using Node.js (Express.js) with localhost IP adress.
