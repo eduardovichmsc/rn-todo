@@ -79,7 +79,7 @@ export default function App() {
         createdAt: Date.now(),
         completed: false,
       });
-      // setTodoText("");
+      setTodoText("");
       fetchTodoList();
     } catch (error) {
       console.log(error);
