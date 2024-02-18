@@ -10,6 +10,6 @@ How to run this applcation
 4. npx expo start or npm run device_name (**android** or **iphone**);
 
 ---
-### changes
+#### changes
 - initial commit - created and deployed todo app
 - added crud backend - Made simple CRUD backend on 3000 port using Node.js (Express.js) with localhost IP adress.
