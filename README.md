@@ -9,11 +9,12 @@ This application was made using React Native and Expo CLI.
 3. npx expo start or npm run device_name (**android** or **iphone**);
 
 
-### How to run server (works at 3000, but you can change it on index.js)
+### How to run server
 1. cd server
 2. npm install
 3. configure package.json (add "serve": "nodemon index.js" on scripts section)
 4. npm run serve
+> works at 3000, but you can change it on index.js or by env parameters
 ---
 #### changes
 - initial commit - created and deployed todo app
