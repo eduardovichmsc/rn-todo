@@ -4,13 +4,13 @@ This application was made using React Native and Expo CLI.
 > This application was made for Android devices, therefore, there may be issues of using it on iPhone.
 ---
 #### How to run client applcation
-1. cd project_name
+1. /rn-todo
 2. npm install
 3. npx expo start or npm run device_name (**android** or **iphone**);
 
 
 ### How to run server
-1. cd server
+1. /rn-todo/server
 2. npm install
 3. configure package.json (add "serve": "nodemon index.js" on scripts section)
 4. npm run serve
